@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jam Digital</title>
+	<style type="text/css">
+		head{
+			font-family: arial;
+		}
+		#gradientBG{
+			background-image: linear-gradient(90deg,darkblue,yellowgreen);
+		}
+		h1{
+			font-size: 50px;
+			color: yellowgreen;
+			position: center;
+			padding: 3px;
+		}
+		.digitalku{
+			background-color: darkslateblue;
+			display: inline-block;
+			padding: 10px;
+			font-family: sans-serif;
+			border-radius: 20px;
+			font-size: 36px;
+		}
+		.jam{
+			float: left;
+			background-color: darkred;
+			color: gold;
+			margin: 15px;
+			width: 110px;
+			height: 110px;
+			border-radius: 110px;
+		}
+		.menit{
+			float: left;
+			background-color: yellow;
+			color: darkblue;
+			margin: 15px;
+			width: 110px;
+			height: 110px;
+			border-radius: 110px;
+		}
+		.detik{
+			float: left;
+			background-color: green;
+			color: lightpink;
+			margin: 15px;
+			width: 110px;
+			height: 110px;
+			border-radius: 110px;
+		}
+
+	</style>
+</head>
+<body id="gradientBG">
+	<center>
+		<h1>JAM DIGITAL</h1>
+		<p><font color="lightgreen">Mulai dari Jam, Menit dan Detik Di bedakan dalam tiga warna yang berbeda</font></p>
+		<p><font color="red">MERAH</font> Untuk Jam, <font color="Yellow">KUNING</font> Untuk Menit dan <font color="Green">HIJAU</font> Untuk Detik</p>
+	<div class="digitalku">
+		<div class="jam">
+			<p id="jam"></p>
+		</div>
+		<div class="menit">
+			<p id="menit"></p>
+		</div>
+		<div class="detik">
+			<p id="detik"></p>
+		</div>
+	</div>
+	<p><font color="lightyellow">Created &copy Rully</font></p>
+	</center>
+	<script>
+	window.setTimeout("waktu()", 1000);
+ 
+	function waktu() {
+		var waktu = new Date();
+		setTimeout("waktu()", 1000);
+		document.getElementById("jam").innerHTML = waktu.getHours();
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+	}
+</script>
+</body>
+</html>
